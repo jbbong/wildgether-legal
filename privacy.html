@@ -30,14 +30,15 @@
 <p>이 방침은 회사가 제공하는 모바일 게임 <strong>Wildgether</strong>(이하 "서비스")에 적용됩니다.</p>
 <p><strong>한눈에 보는 요약</strong></p>
 <ul>
-<li>Wildgether는 <strong>이름·이메일 주소·전화번호를 서버에 저장하지 않습니다.</strong> Google 계정의 고유 식별 번호만 보관합니다.</li>
+<li>Wildgether는 <strong>이름·이메일 주소·전화번호를 서버에 저장하지 않습니다.</strong> 로그인에 사용한 소셜 계정(Google·Apple)의 고유 식별 번호만 보관합니다.</li>
 <li>이용자가 직접 입력하는 정보는 <strong>가입 시 정하는 닉네임 하나뿐</strong>입니다. 채팅·게시판·프로필 기능은 없습니다.</li>
-<li><strong>결제수단(카드번호 등)은 Google Play가 처리</strong>하며 회사는 받지도, 보관하지도 않습니다.</li>
+<li><strong>결제수단(카드번호 등)은 오픈마켓(Google Play·App Store)이 처리</strong>하며 회사는 받지도, 보관하지도 않습니다.</li>
 <li>게임 진행 상태는 <strong>서버에 저장</strong>됩니다. 기기를 바꾸거나 앱을 지워도 같은 계정으로 로그인하면 그대로 복원됩니다.</li>
 <li>현재 버전은 <strong>위치정보(GPS)를 수집하지 않습니다.</strong></li>
 <li><strong>푸시 알림</strong>: 원정 완료 같은 기능 알림과 공지 알림을 보낼 수 있으며, 앱 설정과 기기 설정에서 언제든 끌 수 있습니다. <strong>광고·이벤트 알림은 별도로 동의한 경우에만</strong> 보냅니다(기본값: 미동의). 상세는 2.7절.</li>
 <li><strong>앱 사용 통계</strong>: 서비스 개선(이용 흐름·잔존율 분석)을 위해 <strong>Google 애널리틱스(Firebase)</strong>로 화면 이동·이용 패턴 등 앱 사용 통계를 수집합니다. 상세는 2.8절.</li>
-<li>외부 SDK는 Google 로그인·Google Play 결제·Google AdMob(보상형 광고)·Firebase 클라우드 메시징(푸시 알림)·<strong>Google 애널리틱스(앱 사용 통계)</strong> 다섯 가지뿐입니다.</li>
+<li>외부 SDK는 Google 로그인·<strong>Apple 로그인(iOS)</strong>·오픈마켓 인앱 결제(Google Play·App Store)·Google AdMob(보상형 광고)·Firebase 클라우드 메시징(푸시 알림, iOS는 Apple APNs를 거칩니다)·<strong>Google 애널리틱스(앱 사용 통계)</strong> 뿐입니다.</li>
+<li><strong>이 방침의 정본은 한국어본입니다.</strong> 영어·일본어 번역본은 이용자의 편의를 위한 것이며, 다르게 해석되는 경우 한국어본을 기준으로 합니다(이용약관 제4조 6항).</li>
 </ul>
 <hr>
 <h2>2. 수집하는 개인정보 항목과 이용 목적, 보유 기간</h2>
@@ -45,7 +46,8 @@
 <p>Wildgether는 <strong>로그인하지 않으면 게임을 시작할 수 없는 구조</strong>입니다. 아래 정보는 서비스 제공에 반드시 필요합니다.</p>
 <div class="tablewrap"><table>
 <tr><th>구분</th><th>수집 항목</th><th>수집 시점</th><th>이용 목적</th><th>보유 기간</th></tr>
-<tr><td><strong>회원 식별</strong></td><td>Google 계정 고유 식별자(<code>sub</code>), 로그인 제공자 구분(GOOGLE), 가입 일시</td><td>최초 로그인 시</td><td>회원 식별, 중복 가입 방지, 로그인 상태 유지</td><td>회원 탈퇴 시까지</td></tr>
+<tr><td><strong>회원 식별</strong></td><td>소셜 계정 고유 식별자(<code>sub</code> — Google 또는 Apple이 발급), 로그인 제공자 구분(GOOGLE / APPLE), 가입 일시</td><td>최초 로그인 시</td><td>회원 식별, 중복 가입 방지, 로그인 상태 유지</td><td>회원 탈퇴 시까지</td></tr>
+<tr><td><strong>Apple 자격 증명</strong> (Apple 로그인 이용자만)</td><td>Apple이 발급한 갱신 토큰(refresh token)</td><td>Apple 로그인 시마다 최신 값으로 교체</td><td><strong>회원 탈퇴 시 Apple 계정과의 연결을 회사가 직접 해제</strong>하기 위함입니다(Apple 심사 지침 5.1.1(v)의 요구사항). 이 토큰만으로는 Apple의 어떤 정보도 조회할 수 없습니다</td><td>회원 탈퇴 시까지 (탈퇴 처리 시 즉시 파기)</td></tr>
 <tr><td><strong>닉네임</strong></td><td>이용자가 직접 정한 닉네임, 닉네임 변경 이력(변경 전후 닉네임·변경 일시·사용한 재화)</td><td>가입 시(최초 설정), 게임 내 유료 변경 시</td><td>게임 내 이용자 표시·식별, 닉네임 중복 방지, 부적절한 닉네임(욕설·사칭 등) 제재 및 분쟁 대응</td><td>회원 탈퇴 시까지</td></tr>
 <tr><td><strong>게임 진행 정보</strong></td><td>기지 레벨, 코인·젬 보유량, 원정 슬롯 수, 거주(홈) 리전, 보호구역 외형 단계, 마지막 정산 시각, 장착한 먹이, 보유 동물의 종·수량, 도감 최초 포획 종·일시, 먹이 보유 수량, 원정 파견·결과 이력(리전·먹이·시작/종료 시각·포획한 종·등급·포획 시각), 일일·주간 미션 진행도와 보상 수령 이력</td><td>게임 이용 중</td><td>게임 진행 상태 저장·복원, 보상 지급, 도감·미션 진행 산정, 부정 이용 방지</td><td>회원 탈퇴 시까지</td></tr>
 <tr><td><strong>결제 정보</strong></td><td>(젬 구매) 스토어 주문 번호, 상품 ID, 지급된 젬 수량, 첫 구매 보너스 적용 여부, 구매 일시<br>(구독) 구독 상품 ID, 구매 토큰, 구독 만료 일시, 자동 갱신 여부, 갱신 일시</td><td>결제 시</td><td>결제 검증, 상품 지급, 중복 지급 방지, 구독 혜택 적용, 환불·문의 처리</td><td><strong>5년</strong> (전자상거래법)</td></tr>
@@ -61,16 +63,24 @@
 <blockquote>
 <p><strong>회사가 수집·저장하지 않는 것</strong></p>
 <ul>
-<li><strong>이름, 이메일 주소, 프로필 사진, 전화번호, 생년월일, 성별</strong> — 회사 서버는 Google 계정의 <strong>고유 식별자(sub)만</strong> 저장합니다. 상세는 2.2절.</li>
-<li><strong>결제수단 정보</strong> — 카드번호, 계좌번호 등은 Google Play가 처리하며 회사에 전달되지 않습니다.</li>
+<li><strong>이름, 이메일 주소, 프로필 사진, 전화번호, 생년월일, 성별</strong> — 회사 서버는 소셜 계정의 <strong>고유 식별자(sub)만</strong> 저장합니다. 상세는 2.2절.</li>
+<li><strong>결제수단 정보</strong> — 카드번호, 계좌번호 등은 오픈마켓(Google Play·App Store)이 처리하며 회사에 전달되지 않습니다.</li>
 <li><strong>채팅·게시글 등 닉네임 이외에 이용자가 직접 입력하는 정보</strong> — 현재 버전의 문자 입력 기능은 가입 시 닉네임 설정뿐입니다.</li>
 <li><strong>주소록, 사진, 카메라, 마이크, 통화 기록</strong> — 앱이 해당 권한을 요청하지 않습니다(2.5절 참조).</li>
 </ul>
 </blockquote>
-<h3>2.2 Google 로그인으로 회사가 받는 정보에 대한 안내 (중요)</h3>
+<h3>2.2 소셜 로그인으로 회사가 받는 정보에 대한 안내 (중요)</h3>
+<p><strong>Google 로그인 (Android·iOS)</strong></p>
 <p>Google 로그인 화면에서 앱은 Google의 기본 설정에 따라 <strong>"이메일 주소 보기"와 "기본 프로필 정보 보기"</strong> 권한을 요청합니다. 그 결과 Google이 발급하는 인증 토큰에는 이메일 주소·이름·프로필 사진 주소가 포함되어 있습니다.</p>
 <p><strong>그러나 회사 서버는 이 토큰에서 계정 고유 식별자(<code>sub</code>) 하나만 꺼내 저장하고, 이메일 주소·이름·프로필 사진은 저장하지 않으며 이후 어떤 용도로도 사용하지 않습니다.</strong> 앱 화면에도 이메일 주소나 이름을 표시하지 않습니다.</p>
 <p>회사는 Google 로그인의 기본 요청 권한을 그대로 사용합니다. 서버가 고유 식별자만 저장·이용한다는 점은 위와 같으며, 이는 코드로 강제되어 있습니다(계정 테이블에 이메일·이름 컬럼이 존재하지 않습니다).</p>
+<p><strong>Apple 로그인 (iOS)</strong></p>
+<p>Apple 로그인에서 앱은 <strong>이름·이메일 주소를 요청하지 않습니다.</strong> 요청 항목을 비워 두었기 때문에 Apple의 「이메일 가리기」를 선택할 필요조차 없으며, 회사는 이메일 주소를 <strong>가려진 형태로도 받지 않습니다.</strong></p>
+<p>회사가 Apple로부터 받아 저장하는 것은 두 가지입니다.</p>
+<ul>
+<li><strong>계정 고유 식별자(<code>sub</code>)</strong> — 회원 식별용. Google과 마찬가지로 이름·이메일은 저장하지 않습니다.</li>
+<li><strong>갱신 토큰(refresh token)</strong> — <strong>회원 탈퇴 시 Apple 계정 연결을 회사가 직접 해제</strong>하기 위해서만 보관합니다. Apple은 로그인 기능을 제공하는 앱에 탈퇴 시 연결 해제를 의무화하고 있습니다(심사 지침 5.1.1(v)). 이 토큰은 회사가 보관 중인 비밀 키와 함께 쓰여야만 동작하고, 이용자의 Apple 계정 정보를 조회하는 데에는 쓸 수 없습니다. 탈퇴 처리 시 즉시 파기합니다.</li>
+</ul>
 <h3>2.3 앱이 기기에만 저장하고 서버로 보내지 않는 정보</h3>
 <div class="tablewrap"><table>
 <tr><th>항목</th><th>저장 위치</th><th>삭제 시점</th></tr>
@@ -94,9 +104,7 @@
 </ul></li>
 </ul>
 <p>앱은 광고 SDK를 초기화하기 전에 <strong>Google UMP(사용자 메시지 플랫폼)를 통해 광고 개인 맞춤 설정 동의 절차를 수행</strong>하며, 설정 화면에서 언제든 다시 열어 선택을 바꿀 수 있습니다. 동의 요구 여부는 이용자가 있는 지역의 규정에 따라 Google이 판단합니다.</p>
-<blockquote>
-<p>iOS 추적 권한 요청(ATT)은 iOS 출시 시 적용됩니다. 현재 서비스는 Android만 제공합니다.</p>
-</blockquote>
+<p>iOS에서는 광고 SDK 초기화 전에 <strong>Apple의 추적 허용 요청(App Tracking Transparency)</strong> 화면이 표시됩니다. 이 화면에서 추적을 허용하지 않으면 광고 식별자(IDFA)가 제공되지 않으며, <strong>허용하지 않아도 보상형 광고 시청과 보상 지급에는 아무런 제한이 없습니다.</strong></p>
 <h3>2.5 앱이 사용하는 권한</h3>
 <div class="tablewrap"><table>
 <tr><th>플랫폼</th><th>권한</th><th>용도</th><th>거부 가능 여부</th></tr>
@@ -110,10 +118,12 @@
 <tr><td>Android</td><td>설치 경로 확인(BIND_GET_INSTALL_REFERRER_SERVICE)</td><td>앱 설치 유입 경로 통계 (Google 애널리틱스가 요구)</td><td>시스템 권한</td></tr>
 <tr><td>Android</td><td>인앱 결제(com.android.vending.BILLING)</td><td>젬·구독 구매</td><td>시스템 권한</td></tr>
 <tr><td>Android</td><td>푸시 수신(C2DM RECEIVE)</td><td>서버 공지·이벤트 알림 수신 (2.7절)</td><td>알림 거부 시 표시되지 않음</td></tr>
+<tr><td>iOS</td><td>알림</td><td>원정 완료 등 기능 알림·공지·(동의 시) 이벤트 알림 표시 (2.7절)</td><td>거부 가능 — <strong>거부해도 게임 이용에 아무런 제한이 없습니다</strong></td></tr>
+<tr><td>iOS</td><td>추적(App Tracking Transparency)</td><td>광고 식별자(IDFA)를 이용한 맞춤 광고 (2.4절)</td><td>거부 가능 — <strong>거부해도 보상형 광고 시청·보상 지급에 제한이 없습니다</strong></td></tr>
 </table></div>
 <ul>
 <li>카메라·마이크·주소록·사진·저장소·위치 권한은 <strong>요청하지 않습니다.</strong></li>
-<li>위 목록은 2026-08-14 빌드의 병합된 AndroidManifest를 확인해 작성했습니다.</li>
+<li>Android 목록은 2026-08-14 빌드의 병합된 AndroidManifest, iOS 목록은 같은 시기 <code>Info.plist</code>를 확인해 작성했습니다.</li>
 </ul>
 <h3>2.6 위치정보</h3>
 <p><strong>Wildgether는 위치정보(GPS)를 일절 수집하지 않습니다.</strong> 앱에 위치 관련 라이브러리가 포함되어 있지 않으며, 위치 권한을 요청하지도 않습니다.</p>
@@ -144,10 +154,10 @@
 <hr>
 <h2>3. 개인정보의 수집 방법</h2>
 <ul>
-<li>이용자가 Google 계정으로 로그인할 때 (Google이 발급한 인증 토큰을 회사 서버가 검증)</li>
+<li>이용자가 소셜 계정(Google·Apple)으로 로그인할 때 (해당 사업자가 발급한 인증 토큰을 회사 서버가 검증. Apple 로그인은 탈퇴 시 연결 해제에 쓰는 갱신 토큰을 함께 받습니다 — 2.2절)</li>
 <li>이용자가 가입 과정에서 닉네임을 직접 입력할 때 (게임 내에서 유료로 변경하는 경우 포함)</li>
 <li>이용자가 게임을 플레이하는 과정에서 자동으로 (게임 진행 정보)</li>
-<li>이용자가 Google Play에서 결제하고, 회사 서버가 Google Play에 영수증 유효성을 확인하는 과정에서</li>
+<li>이용자가 오픈마켓(Google Play·App Store)에서 결제하고, 회사 서버가 해당 마켓에 영수증 유효성을 확인하는 과정에서</li>
 <li>이용자가 보상형 광고를 끝까지 시청했을 때 Google이 회사 서버로 보내는 검증 신호에서</li>
 <li>이용자가 알림 권한을 허용한 상태로 로그인해 앱이 푸시 토큰을 등록할 때, 앱 설정에서 알림 수신 설정을 바꿀 때</li>
 <li>이용자가 앱을 사용하는 동안 Google 애널리틱스 SDK가 자동으로 수집할 때 (화면 이동·이벤트 등 앱 사용 기록 — 2.8절)</li>
@@ -164,7 +174,7 @@
 <li><strong>약관·개인정보처리방침 동의 이력</strong>, 광고성 정보 수신 동의·철회 이력</li>
 <li>푸시 토큰과 알림 설정, 중복 요청 방지 기록</li>
 <li>재화 획득·소비 내역 (결제 기록과 별개인 게임 내 기록), 광고 보상 지급 기록</li>
-<li>Google 계정과의 연결 정보 — 연결이 끊기므로 같은 Google 계정으로 새로 가입할 수 있습니다</li>
+<li>소셜 계정과의 연결 정보 및 <strong>Apple 자격 증명</strong> — 연결이 끊기므로 같은 계정으로 새로 가입할 수 있습니다. Apple 로그인 이용자의 경우 회사가 Apple에 연결 해제를 함께 요청합니다</li>
 </ul>
 <p>4.2의 보존 대상(결제 기록)만 이용자를 식별할 수 없는 상태로 법정 기간 동안 남습니다.</p>
 <h3>4.2 법령에 따라 보존하는 정보</h3>
@@ -197,6 +207,7 @@
 <div class="tablewrap"><table>
 <tr><th>수탁자</th><th>위탁 업무</th><th>위탁하는 정보</th><th>보유·이용 기간</th></tr>
 <tr><td><strong>Google LLC</strong></td><td>① 로그인 인증 (Google 계정 토큰 검증)<br>② 인앱 결제 및 영수증 검증 (Google Play)<br>③ 보상형 광고 게재 및 보상 검증 (Google AdMob)<br>④ 푸시 알림 발송 (Firebase 클라우드 메시징)<br>⑤ 앱 사용 통계 분석 (Firebase/Google 애널리틱스)</td><td>계정 고유 식별자, 구매 토큰·주문 번호, 회원 식별 번호, 광고 식별자, 푸시 토큰, 앱 인스턴스 ID·기기 정보·앱 사용 기록</td><td>위탁 계약 종료 시 또는 회원 탈퇴 시까지 (분석 데이터는 보존 설정 기준 기본 14개월 — 2.8절)</td></tr>
+<tr><td><strong>Apple Inc.</strong> (iOS 이용자)</td><td>① 로그인 인증 (Apple 계정 토큰 검증·탈퇴 시 연결 해제)<br>② 인앱 결제 및 영수증 검증 (App Store)<br>③ 푸시 알림 전달 (APNs — Firebase가 발송한 알림을 iOS 기기로 전달)</td><td>계정 고유 식별자, Apple 갱신 토큰, 거래 식별자·구독 식별자, 푸시 토큰</td><td>위탁 계약 종료 시 또는 회원 탈퇴 시까지</td></tr>
 <tr><td><strong>Amazon Web Services, Inc.</strong></td><td>서비스 서버·데이터베이스·이미지 저장소 등 클라우드 인프라 운영</td><td>이 방침 2.1절의 수집 항목 전체</td><td>위탁 계약 종료 시 또는 회원 탈퇴 시까지</td></tr>
 </table></div>
 <p>위탁 업무 내용이나 수탁자가 변경되면 이 방침을 통해 공개합니다.</p>
@@ -206,6 +217,7 @@
 <div class="tablewrap"><table>
 <tr><th>이전받는 자</th><th>이전 국가</th><th>이전 일시 및 방법</th><th>이전 항목</th><th>이전 목적</th><th>보유·이용 기간</th></tr>
 <tr><td>Google LLC<br>(문의: https://support.google.com/policies)</td><td>미국 등 Google이 서버를 운영하는 국가</td><td>로그인·결제·광고 시청·알림 수신 등록·앱 사용 시점에 네트워크를 통해 암호화 전송</td><td>계정 고유 식별자, 구매 토큰·주문 번호, 회원 식별 번호, 광고 식별자, 푸시 토큰, 앱 인스턴스 ID·기기 정보·앱 사용 기록(분석 데이터 — 2.8절)</td><td>로그인 인증, 결제 검증, 광고 게재·보상 검증, 푸시 알림 발송, 앱 사용 통계 분석</td><td>이전 목적 달성 시까지 (분석 데이터는 보존 설정 기준 기본 14개월)</td></tr>
+<tr><td>Apple Inc.<br>(문의: https://www.apple.com/legal/privacy/)</td><td>미국 등 Apple이 서버를 운영하는 국가</td><td>iOS에서 로그인·결제·알림 수신 등록·회원 탈퇴 시점에 네트워크를 통해 암호화 전송</td><td>계정 고유 식별자, Apple 갱신 토큰, 거래 식별자·구독 식별자, 푸시 토큰</td><td>로그인 인증 및 탈퇴 시 연결 해제, 결제·구독 검증, 푸시 알림 전달(APNs)</td><td>이전 목적 달성 시까지</td></tr>
 </table></div>
 <p><strong>클라우드 인프라(Amazon Web Services)는 국외 이전에 해당하지 않습니다.</strong> 회사는 서버·데이터베이스·이미지 저장소를 <strong>AWS 서울 리전(ap-northeast-2)</strong>에서 운영하므로 게임 데이터는 대한민국 내에 저장됩니다. AWS는 6장의 위탁 표에만 기재됩니다.</p>
 <hr>
@@ -278,9 +290,9 @@
 <hr>
 <p><strong>부칙</strong></p>
 <ul>
-<li>공고일자: 2026-08-14</li>
-<li>시행일자: 2026-08-14</li>
-<li>이전 버전: 해당 없음 (최초 제정)</li>
+<li>공고일자: 2026-08-22</li>
+<li>시행일자: 2026-08-22</li>
+<li>이전 버전: 2026-08-14 시행 방침 (변경 내용: Apple 로그인·App Store 결제·APNs 도입에 따라 6장 위탁·7장 국외 이전에 <strong>Apple Inc.</strong> 추가, 2.1절에 Apple 자격 증명(갱신 토큰) 수집 항목 추가, 2.2절에 Apple 로그인 안내 신설, 결제·로그인 관련 서술을 소셜 계정·오픈마켓 기준으로 정비, 영어·일본어 번역본 제공 및 정본 언어 고지)</li>
 </ul>
 </body>
 </html>
